@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/png" href="../static/img/PNG/SPico.png">
+        <link rel="stylesheet" href="../static/CSS/style.css">
+        <link rel="stylesheet" href="../static/CSS/mediaQStyle.css">
+        <link rel="stylesheet" href="../static/CSS/loadingPage.css">
+        <link rel="stylesheet" href="../static/CSS/bootstrap.min.css">
+
+        <title>{{ title + ' | SOFAPAD' if title else 'SOFAPAD'}}</title>
+    </head>
+
+
+
+
+    <body>
+
+            <!-- ==========The Preloder Animation========= -->
+        <div class="loading">
+            <div class="centerLoad">
+                <div class="turnCircle">
+                    <div class="image">
+                        <img src="../static/img/PNG/SofaPad.png" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    {% block main%}
+
+
+    {% endblock %}
+
+
+    </body>
+    <script src="../static/JS/root.js"></script>
+
+
+</html>

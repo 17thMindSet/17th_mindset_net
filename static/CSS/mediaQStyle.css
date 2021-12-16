@@ -1,0 +1,98 @@
+/* -=------------Medias Queries CSS---------------------- */
+@media only screen and (min-width: 710px){
+    .firsBlock, .load, .footer .linkout{
+        padding-left:  17%;
+        padding-right: 17%;
+    }
+
+    .butones{
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        
+
+    }
+
+    .butones a{
+        width: 100%;
+        margin: 1% 5%;
+    }
+
+    .firsBlock{
+        height: 87vh;
+        background-position: bottom;
+        background-size:cover;
+        background-repeat:no-repeat;
+        
+
+    }
+
+    .load{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .infos{
+        width: 100%;
+    }
+
+    .infos .features{
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: center;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+        
+    }
+
+    .infos .feats{
+        
+        width: 50%;
+    }
+
+    .infos .features img{
+        width: 37%;
+    }
+
+    .linkout{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        
+    }
+
+    .link{
+        width: 45%;
+    }
+    .linkout .link a{
+        
+        padding: 0;
+        color: indigo;
+        
+    }
+
+    .comBlock{
+        width: 45%;
+    }
+
+    .link h3{
+        padding-bottom: 33px;
+    }
+
+    .footer .bottomFoot .copyright, .footer .bottomFoot .bar{
+        display: block;
+        margin-right: 15px;
+    }
+
+    
+
+    
+    .footer .bottomFoot {
+        display: flex;
+        justify-content:flex-end;
+    }
+    
+
+}

@@ -1,0 +1,117 @@
+
+{% extends 'temp.html' %}
+
+
+{% block main%}
+
+
+
+
+
+        <!-- ===-----=============The main div -==============-========== -->
+        <div class="MainPage">
+            <div class="firsBlock">
+                <div class="part1" >
+                    <header>
+                        <img src="../static/img/SVG/header.svg" alt="Sofapad" style="width: 43%;">
+                    </header>
+                    
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur odio eligendi error rerum, dolore, quod blanditiis nam adipisci molestias quo omnis ipsam, architecto illo debitis tempore amet numquam quas. Placeat.
+                        </p>
+                </div>
+                
+            
+                <div class="butones">
+                    
+                    <a href="https://whatsapp.me/+18496508063" class="Ctc">Contact Us</a>
+                    <a href="#down">Download</a>
+                </div>    
+            </div>
+            <div class="load" id="down">
+                
+                <img class="screen" src="../static/img/SVG/laptop.svg" alt="imac" style="width: 57%;">
+                
+                
+                <div>
+                    <h4>Download Sofapad For windows.</h4>
+                    <div class="loadBtn" >
+                        <div class="svgW"><img src="../static/img/SVG/windows.svg" alt=""></div>
+                        <div class="Btn">
+                            <a href="#" >Download</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="infos">
+                <h1>Sofapad Text Editor</h1>
+                <div class="features">
+                    <img src="../static/img/SVG/laptopInc.svg" alt="Laptop inconito">
+                    <div class="feats">
+                        <h3>Features</h3>
+                        <h5>Edit/Create Files Text</h5>
+                        <h5>Title</h5>
+                        <h5>Night Mode</h5>
+                        <h5>Setup Text</h5>
+                        <h5>Search Word</h5>
+                        <h5>Translate Mode</h5>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="footer">
+                <div class="linkout">
+                    <div class="link">
+
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. .</h3>
+                        <a href="http://Github.com">Github</a>
+                        <a href="#">About Us</a>
+                        <a href="">Blogs</a>
+                        <a href="http://">F&Q</a><br>
+                        <a href="#">About Us</a>
+                        <a href="">Blogs</a>
+                        <a href="http://">F&Q</a>
+                    </div>
+                    
+                    <div class="comBlock">
+                        <div class="com">
+                            <p>Leave a Comment.</p>
+                            <form action={{url_for('succesMail')}} method="post">
+                                <input type="email" name="email" id="email" placeholder="Enter your E-mail Here!">
+                                <div class="mail" id="mailId">
+
+                                    <input type="textarea" wrap='true' name="comment" id="comment" placeholder="Leave Your Comment Here!">
+                                    <div class="sendComent"><button type="submit" id="sendComment" >send</button></div>
+                                </div>
+
+                            </form>
+                            <p id='errorP' style="color:#FF0000"></p>
+                            <img src="../static/img/SVG/inconito.svg" alt="inconito Inc." style="width: 117px;">
+                             <h5>POWERED BY <span>INCONITO</span></h5>
+                        </div>
+
+                    
+                        
+                        
+     
+                    </div>
+
+                    
+
+                </div>
+
+                <div class="bottomFoot">
+                    <p class="copyright">Copyright 2021-SofaPad</p>
+                    <p class="bar">|</p>
+                    <p>Developed by Elie. Jr. </p>
+
+                </div>
+
+            </div>
+            
+        </div>
+        
+{% endblock %}
