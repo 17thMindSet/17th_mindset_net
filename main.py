@@ -1,50 +1,32 @@
 # inconito17 nov. 2021
 
-from flask import Flask, render_template, url_for,redirect
+from flask import Flask, render_template, url_for,redirect,request,flash
 import jyserver.Flask as jsf
 
 
 
 app = Flask(__name__)
 
-@jsf.use(app)
 
-class App:
-    def __init__(self):
-        pass
-
-    def checkComment(self):
-
-        email = self.js.document.getElementById('email').value
-        comment = self.js.document.getElementById('comment').value
-
-        if email == '' or comment == '':
-            errorP=self.js.document.getElementById('errorP')
-            errorP.innerHTML = 'Please Fill all The  Fields!!'
-        else:
-            @app.route('/succes')
-            def succes():
-                print('salut')
-                return redirect(url_for('home'))
-
-
-
-
-
-
-
-
-
-
-
+# @jsf.use(app)
+#
+# class App:
+#     def __init__(self):
+#         pass
+#
+#     def checkComment(self):
+#
+#         errorP=self.js.document.getElementById('errorP')
+#         errorP.innerHTML = 'Please Fill all The  Fields!!'
+#
 
 
 # Go to the Home page
 @app.route("/")
 @app.route('/home')
 def home():
-    return App.render(render_template(
-        'index.html', title='Home', desContent='Welcome to sofapad!!!!'))
+    return render_template(
+        'index.html', title='Home', desContent='Welcome to sofapad!!!!')
 
 
 # HAndler the 404 error--------------
@@ -53,9 +35,36 @@ def pageNotFound(e):
     return render_template('error.html'), 404
 
 
-@app.route('/sendMailSucces', methods=['post'])
-def succesMail():
-    return 'mail sent'
+@app.route('/sendMailSucces/<stats>', methods=['post','get'])
+def sendMail(stats):
+    stats = 'klk'
+    if request.method=='POST':
+        try:
+            msg=''
+            if request.form["email"]=='' or request.form['comment'] == '':
+                msg=("Please Fill all The  Fields!!'")
+                color='color:#ff0000'
+                stats='error'
+
+
+
+
+            else:
+                msg = ("Comment sent succesfully!")
+                color = 'color:#0000ff'
+                stats='succes'
+
+
+            return  render_template('index.html', msg=msg, color=color)
+
+        except:
+            return render_template('index.html')
+
+    else:
+        return redirect(url_for('home'))
+
+
+
 
 
 

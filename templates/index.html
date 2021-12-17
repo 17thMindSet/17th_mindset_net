@@ -79,7 +79,7 @@
                     <div class="comBlock">
                         <div class="com">
                             <p>Leave a Comment.</p>
-                            <form action={{url_for('succesMail')}} method="post">
+                            <form action={{url_for('sendMail')}} method="post">
                                 <input type="email" name="email" id="email" placeholder="Enter your E-mail Here!">
                                 <div class="mail" id="mailId">
 
@@ -88,7 +88,7 @@
                                 </div>
 
                             </form>
-                            <p id='errorP' style="color:#FF0000"></p>
+                            <p id='errorP' style="{{color}}">{{msg}}</p>
                             <img src="../static/img/SVG/inconito.svg" alt="inconito Inc." style="width: 117px;">
                              <h5>POWERED BY <span>INCONITO</span></h5>
                         </div>
